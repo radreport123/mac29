@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require("path");
 
+const port = process.env.PORT || 3000;
+
 
 const app = express();
 
@@ -28,7 +30,7 @@ app.use('/', (req, res, next)=> {
 
 
 
-app.listen(3000, (req, res, next) => {
+app.listen(port, (req, res, next) => {
     console.log('server is started on port 3000');
 });
 
